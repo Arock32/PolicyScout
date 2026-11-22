@@ -1,0 +1,17 @@
+venv/
+.venv/
+.env
+__pycache__/
+*.pyc
+.vscode/
+logs/
+data/
+extracted_text/
+preprocessed_text/
+output/
+evaluation/evaluation_report.csv
+evaluation/evaluation_results.json
+evaluation/evaluation_questions.json
+test_gemini.py
+test_openrouter.py
+validate_chunks.py
