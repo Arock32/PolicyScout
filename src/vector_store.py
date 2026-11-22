@@ -40,6 +40,50 @@ def load_chunks():
 
     return chunks
 
+# ============================================================
+# ONE-TIME FAISS INDEX CREATION
+# Uncomment only when rebuilding the FAISS index.
+# Do not execute during normal application usage.
+# ============================================================
+
+# def create_faiss_index(embeddings):
+#
+#     print("\nCreating FAISS index...")
+#
+#     dimension = embeddings.shape[1]
+#
+#     index = faiss.IndexFlatIP(dimension)
+#
+#     print("Index type: IndexFlatIP")
+#     print(f"Vector dimensions: {dimension}")
+#
+#     return index
+#
+#
+# def add_embeddings(index, embeddings):
+#
+#     print("\nAdding embeddings to FAISS...")
+#
+#     embeddings = np.ascontiguousarray(
+#         embeddings,
+#         dtype=np.float32
+#     )
+#
+#     index.add(embeddings)
+#
+#     print(f"Vectors inserted: {index.ntotal}")
+#
+#     return index
+#
+#
+# def save_faiss_index(index):
+#
+#     print("\nSaving FAISS index...")
+#
+#     faiss.write_index(index, str(FAISS_INDEX_FILE))
+#
+#     print(f"Index saved to: {FAISS_INDEX_FILE}")
+
 def load_faiss_index():
 
     print("\nLoading FAISS index...")
